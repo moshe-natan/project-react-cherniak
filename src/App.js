@@ -17,13 +17,12 @@ function App() {
   const [allInfo, setAllInfo] = useState({})
 
   useEffect(() => {
-    ['users' ,'todos' ,'photos' ,'albums' ,'comments' ,'posts' ].forEach((e, i) => {
+    ['users' ,'todos' ,'albums' ,'posts' ].forEach((e, i) => {
         fetch(`https://jsonplaceholder.typicode.com/${e}`)
           .then(res => res.json())
           .then(data => allInfo[e] = data)
     })
     setAllInfo(allInfo)
-    
   }, [])
 
   return (
