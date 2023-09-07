@@ -1,2 +1,2 @@
 # Exclude the "docs" and "vendor" folders from language statistics
-public/ linguist-vendored
+public/* linguist-vendored
